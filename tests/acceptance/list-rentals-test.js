@@ -20,10 +20,12 @@ test('should link to contact information.', async function (assert){
   await click(".menu-contact");
   assert.equals(currentURL(), '/rentals', 'should navigate to contact');
 });
-/*test('should list avaliable rentals.', async function (assert) {
+test('should list avaliable rentals.', async function (assert) {
+  await visit('/');
+  assert.equal(this.element.querySelectorAll('.listing').length, 3, 'should display 3 listings');
 });
 test('should filter the list of rentals by city.', async function (assert){
-});
+});/*
 test('should showdetails for a selected rental', async function (assert) {
 });
 */

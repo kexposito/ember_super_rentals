@@ -1,3 +1,8 @@
+You can check here: 
+http://kevin-ember-rent.surge.sh
+guide :
+https://guides.emberjs.com/release/tutorial/deploying/
+
 # super-rentals
 
 This README outlines the details of collaborating on this Ember application.

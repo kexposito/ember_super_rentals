@@ -1,3 +1,6 @@
+You can check here: 
+http://kevin-ember-rent.surge.sh
+
 # super-rentals
 
 This README outlines the details of collaborating on this Ember application.

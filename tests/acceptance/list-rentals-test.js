@@ -2,13 +2,12 @@ import Service from '@ember/service';
 import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
 import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
-
 import {
   click,
   currentURL,
   visit,
-  fillIn,
-  triggerKeyEvent
+  //fillIn,
+  //triggerKeyEvent
 } from '@ember/test-helpers'
 import { resolve } from 'rsvp';
 
@@ -28,10 +27,12 @@ module('Acceptance | list rentals', function(hooks) {
   });
 
 
-  test('should append map element to container element', async function(assert) {
-  this.set('myLocation', 'New York');
-  await render(hbs`{{location-map location=myLocation}}`);
-  assert.ok(this.element.querySelector('.map-container > .map'), 'container should have map child');
-  assert.equal(this.get('mapsService.calledWithLocation'), 'New York', 'should call service with New York');
-});
+  test('should show details for a specific rental', async function(assert) {
+    await visit('/rentals');
+    await click(".grand-old-mansion");
+    assert.equal(currentURL(), '/rentals/grand-old-mansion', "should navigate to show route");
+    assert.ok(this.element.querySelector('.show-listing h2').textContent.includes("Grand Old Mansion"), 'should list rental title');
+    assert.ok(this.element.querySelector('.show-listing .description'), 'should list a description of the property');
+  });
+
 });

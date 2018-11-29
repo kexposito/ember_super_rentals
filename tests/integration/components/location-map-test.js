@@ -13,7 +13,6 @@ let StubMapsService = Service.extend({
     return resolve(element);
   }
 });
-
 module('Integration | Component | location-map', function(hooks) {
   setupRenderingTest(hooks);
 

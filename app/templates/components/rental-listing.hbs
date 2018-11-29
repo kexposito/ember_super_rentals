@@ -1,10 +1,11 @@
 <article class="listing">
-    <a 
+  <a 
     onclick={{action "toggleImageSize"}}
     class="image {{if isWide "wide"}}"
-    role="button">
-  <img src={{rental.image}} alt="">
-  <small>View Larger</small>
+    role="button"
+  >
+    <img src={{rental.image}} alt="">
+    <small>View Larger</small>
   </a>
   <div class="details">
     <h3>{{#link-to "rentals.show" rental class=rental.id}}{{rental.title}}{{/link-to}}</h3>

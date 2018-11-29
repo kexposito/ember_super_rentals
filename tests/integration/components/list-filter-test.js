@@ -8,7 +8,7 @@ import { resolve } from 'rsvp';
 const ITEMS = [{city: 'San Francisco'}, {city: 'Portland'}, {city: 'Seattle'}];
 const FILTERED_ITEMS = [{city: 'San Francisco'}];
 
-module('Integration | Component | list-filtrer', function(hooks) {
+module('Integration | Component | list-filter', function(hooks) {
   setupRenderingTest(hooks);
 
   test('should initially load all listings', async function (assert) {

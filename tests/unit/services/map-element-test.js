@@ -29,7 +29,7 @@ module('Unit | Service | map element', function(hooks) {
     assert.ok(element, 'element exists');
     assert.equal(element.className, 'map', 'element has class name of map');
 
-    est('should use existing map if one is cached for location', async function (assert) {
+    test('should use existing map if one is cached for location', async function (assert) {
       assert.expect(1);
       let stubCachedMaps = {
         sanFrancisco: DUMMY_ELEMENT

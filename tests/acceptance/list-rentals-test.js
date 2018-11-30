@@ -23,7 +23,7 @@ module('Acceptance | list rentals', function(hooks) {
 
   hooks.beforeEach(function() {
     this.owner.register('service:map-element', StubMapsService);
-    this.mapsService = this.owner.lookup('service:map-element');
+   // this.mapsService = this.owner.lookup('service:map-element');
   });
 
 

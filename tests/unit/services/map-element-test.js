@@ -2,6 +2,7 @@ import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 import { resolve } from 'rsvp';
 
+
 const DUMMY_ELEMENT = {};
 
 
@@ -18,12 +19,14 @@ module('Unit | Service | map element', function(hooks) {
         return DUMMY_ELEMENT;
       }
     }
+    
     let stubGeocodeService = {
       fetchCoordinates(location) {
         assert.equal(location, 'San Francisco', 'fetchCoordinates called with location');
         return resolve([0, 0]);
       }
     }
+    
     let mapService = this.owner.factoryFor('service:map-element').create({map: stubMapService, geocode: stubGeocodeService});
     let element = await mapService.getMapElement('San Francisco');
     assert.ok(element, 'element exists');
